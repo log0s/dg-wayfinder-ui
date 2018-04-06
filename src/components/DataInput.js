@@ -70,10 +70,10 @@ class DataInput extends React.Component {
 
     this.setState({ querying: true });
 
-    fetchParse( `http://${process.env.REACT_APP_WAYFINDER_API_URL}/summary?input=${selectedTab}&output=${outputFormat}`, options )
+    fetchParse( `${process.env.REACT_APP_WAYFINDER_API_URL}/summary?input=${selectedTab}&output=${outputFormat}`, options )
       .then( result => {
         const newParentState = outputFormat === 'geojson'
-          ? { 'geojson': JSON.stringify( result ) }
+          ? { 'geojson': JSON.stringify( result, undefined, 2 ) }
           : { 'csv': result };
 
         this.props.setParentState( newParentState );
