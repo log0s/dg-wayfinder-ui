@@ -1,4 +1,4 @@
-# dg-wayfinder
+# dg-wayfinder-ui
 
 This is a simple UI designed to work with [dg-wayfinder](https://github.com/log0s/dg-wayfinder). Please see that repo for more detailed instructions
 
